@@ -4,7 +4,7 @@ from typing import List, Optional, Literal, Dict
 
 class ProjectInfo(BaseModel):
     projectName: str
-    templateId: Optional[str] = None
+    templateID: Optional[str] = None
 
 
 class DocumentSettings(BaseModel):
@@ -23,7 +23,7 @@ class Size(BaseModel):
 
 
 class AssetContent(BaseModel):
-    imageURL: Optional[str] = None
+    imageUrl: Optional[str] = None
     textBody: Optional[str] = None
 
 
@@ -38,7 +38,7 @@ class TextStyle(BaseModel):
 
 
 class Asset(BaseModel):
-    assetType: Literal["Article", "Image"]
+    assetType: Literal["Article", "Image", "Ad"]
     position: Position
     size: Size
     content: AssetContent
